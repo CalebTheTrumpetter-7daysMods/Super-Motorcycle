@@ -1,0 +1,6 @@
+<caleb>
+<append xpath="/loot/lootcontainers">
+<lootcontainer name="vehicleSuperMotorcycle" count="0" size="15,7" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+</append>
+</caleb>

@@ -1,0 +1,42 @@
+<caleb>
+    <append xpath="/items">
+        <item name="vehicleSuperMotorcycleChassis">
+            <property name="Extends" value="vehicleWheels"/>
+            <property name="Tags" value="vehiclesSkill"/>
+            <property name="EconomicValue" value="3000"/>
+            <property name="TraderStageTemplate" value="vehicleTier2"/><!-- vehicleMotorcycleChassis -->
+            <property name="UnlockedBy" value="craftingVehicles"/><!-- perkGreaseMonkey,vehicleMotorcycleChassisSchematic, -->
+            <property name="SoundPickup" value="chassis_grab"/>
+            <property name="SoundPlace" value="chassis_place"/>
+        </item>
+        
+        <item name="vehicleSuperMotorcycleHandlebars">
+            <property name="Extends" value="vehicleWheels"/>
+            <property name="Tags" value="vehiclesSkill"/>
+            <property name="EconomicValue" value="3000"/>
+            <property name="TraderStageTemplate" value="vehicleTier2"/><!-- vehicleMotorcycleHandlebars -->
+            <property name="UnlockedBy" value="craftingVehicles"/><!-- perkGreaseMonkey,vehicleMotorcycleHandlebarsSchematic, -->
+            <property name="SoundPickup" value="handlebars_grab"/>
+            <property name="SoundPlace" value="handlebars_place"/>
+        </item>
+        
+        <item name="vehicleSuperMotorcyclePlaceable">
+            <property name="Extends" value="vehicleMinibikePlaceable"/>
+            <property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+            <property name="Meshfile" value="@:Entities/Vehicles/VMotorcycle/VMotorcycleP.prefab"/>
+            <property name="EconomicValue" value="50000"/>
+            <property name="TraderStageTemplate" value="vehicleTier3"/><!-- vehicleMotorcyclePlaceable -->
+            <property name="SoundPickup" value="motorcycle_grab"/>
+            <property name="SoundPlace" value="motorcycle_place"/>
+            <property class="Action1">
+                <property name="Vehicle" value="vehicleMotorcycle"/>
+                <property name="VehicleSize" value="1.3, 1.9, 3"/>
+            </property>
+            <effect_group name="vehicleMotorcyclePlaceable" tiered="false">
+                <passive_effect name="ModSlots" operation="base_set" value="6"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="750" tags="EconomicValue"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+            </effect_group>
+        </item>
+    </append>
+</caleb>

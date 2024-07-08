@@ -1,0 +1,33 @@
+<caleb>
+    <append xpath="/recipes">
+        <recipe name="vehicleSuperMotorcycleChassis" count="1" craft_time="300" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+            <ingredient name="resourceForgedSteel" count="150"/>
+            <ingredient name="resourceMechanicalParts" count="50"/>
+            <ingredient name="resourceDuctTape" count="30"/>
+            <ingredient name="resourceLeather" count="35"/>
+            <ingredient name="resourceElectricParts" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+            </effect_group>
+        </recipe>
+        
+        <recipe name="vehicleSuperMotorcycleHandlebars" count="1" craft_time="300" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+            <ingredient name="resourceMechanicalParts" count="50"/>
+            <ingredient name="resourceDuctTape" count="30"/>
+            <ingredient name="resourceHeadlight" count="1"/>
+            <ingredient name="resourceElectricParts" count="15"/>
+            <ingredient name="resourceForgedSteel" count="25"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceMechanicalParts,resourceDuctTape,resourceElectricParts,resourceForgedSteel"/>
+            </effect_group>
+        </recipe>
+        
+        <recipe name="vehicleSuperMotorcyclePlaceable" count="1" craft_time="400" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="vehicleWheels" count="2"/>
+            <ingredient name="vehicleMotorcycleChassis" count="1"/>
+            <ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+            <ingredient name="smallEngine" count="3"/>
+            <ingredient name="carBattery" count="2"/>
+        </recipe>
+    </append>
+</caleb>

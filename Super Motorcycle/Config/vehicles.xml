@@ -1,0 +1,149 @@
+<caleb>
+    <append xpath="/vehicles">
+        <vehicle name="vehicleSuperMotorcycle">
+
+            <property name="cameraDistance" value="3.5, 5"/>
+            <property name="cameraTurnRate" value=".2, .35"/>
+            <property name="upAngleMax" value="70"/>
+            <property name="upForce" value="1"/>
+            <property name="steerRate" value="130"/>
+            <property name="steerCenteringRate" value="90"/>
+            <property name="tiltAngleMax" value="20"/>
+            <property name="tiltThreshold" value="3"/>
+            <property name="tiltDampening" value=".22"/>
+            <property name="tiltDampenThreshold" value="8"/>
+            <property name="tiltUpForce" value="5"/>
+    
+            <property name="motorTorque_turbo" value="2800, 1000, 4200, 1300"/>
+            <property name="velocityMax_turbo" value="19.6, 12, 28, 16"/>
+            <property name="brakeTorque" value="5000"/>
+            <property name="hopForce" value="1, .8"/>
+            <property name="unstickForce" value="1"/>
+            <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .1"/>
+            <property name="wheelPtlScale" value="1"/>
+    
+            <property name="hornSound" value="motorbike_horn"/>
+            
+            <property name="recipeName" value="vehicleSuperMotorcyclePlaceable" />
+    
+            <property class="chassis">
+                <property name="class" value="Chassis"/>
+                <property name="paint" value="M"/>
+            </property>
+    
+            <property class="engine">
+                <property name="class" value="Engine"/>
+                <property name="particleOn" value="Particles/p_on"/>
+                <property name="particleDamaged" value="Particles/p_damaged"/>
+                <property name="particleBroken" value="Particles/p_broken"/>
+                <property name="fuelKmPerL" value=".7"/>
+                <property name="foodDrain" value=".002,.0101"/><!-- driving/turbo, motorcycle -->
+    
+                <property name="gear1" value="
+                                    500,2500, -1400,800,0, 700,2000,900,
+                                    Vehicles/Motorbike/motorbike_accel_1,
+                                    ,
+                                    0, .7, 1, .1, -9, .15, .1, Vehicles/Motorbike/motorbike_idle_lp,
+                                    -.3, .1, .1, .4, -.05, 9, .2, Vehicles/Motorbike/motorbike_run_lp
+                                    "/>
+                <property name="gear2" value="
+                                    500,2500, -2000,1000,2000, 620,2200,800,
+                                    Vehicles/Motorbike/motorbike_accel_2,
+                                    Vehicles/Motorbike/motorbike_decel,
+                                    -.2, -.02, .1, .2, -1, 1, .1, Vehicles/Motorbike/motorbike_run_lp
+                                    "/>
+                <property name="gear3" value="
+                                    500,2500, -2000,1000,2000, 570,2200,1000,
+                                    Vehicles/Motorbike/motorbike_accel_3,
+                                    Vehicles/Motorbike/motorbike_decel,
+                                    -.21, -.05, .1, .2, -1, 1, .1, Vehicles/Motorbike/motorbike_run_lp
+                                    "/>
+                <property name="gear4" value="
+                                    500,2500, -2000,1000,2000, 500,9999,9999,
+                                    ,
+                                    Vehicles/Motorbike/motorbike_decel,
+                                    -.25, -.08, .55, .55, -1, 1, .1, Vehicles/Motorbike/motorbike_run_lp
+                                    "/>
+    
+                <property name="sound_start" value="Vehicles/Motorbike/minibike_start_"/>
+                <property name="sound_shut_off" value="Vehicles/Motorbike/minibike_shutoff_"/>
+                <property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+            </property>
+    
+            <property class="fuelTank">
+                <property name="class" value="FuelTank"/>
+                <property name="capacity" value="400"/>
+                <property name="mod" value="fueltank"/>
+                <property name="modT" value="M/Fuel"/>
+            </property>
+    
+            <property class="handlebars">
+                <property name="class" value="Steering"/>
+                <property name="transform" value="M/Forks"/>
+                <property name="steerAngle" value="0, 30, 0"/>
+                <property name="IKHandLPosition" value="-.3362, .4901, -.1789"/>
+                <property name="IKHandLRotation" value="-7.2919, 77.3004, 29.6909"/>
+                <property name="IKHandRPosition" value=".3353, .4747, -.1735"/>
+                <property name="IKHandRRotation" value="4.1479, 105.6533, -158.7339"/>
+                <property name="paint" value="handlebar"/>
+            </property>
+    
+            <property class="seat0">
+                <property name="class" value="Seat"/>
+                <property name="pose" value="30"/>
+                <property name="position" value="0, 0, 0"/>
+                <property name="rotation" value="0, 0, 0"/>
+                <property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+            </property>
+    
+            <property class="seat1">
+                <property name="class" value="Seat"/>
+                <property name="pose" value="31"/>
+                <property name="position" value="0, 0, 0"/>
+                <property name="rotation" value="0, 0, 0"/>
+                <property name="exit" value="-.9,0,-.7 ~ .9,0,-.7 ~ -.6,0,-1.5 ~ -.6,0,1.6 ~ 0,1.5,-.6"/>
+                <property name="mod" value="seat"/>
+                <property name="modT" value="M/Seat"/>
+            </property>
+    
+            <property class="wheel0">
+                <property name="tireTransform" value="M/Forks/Wheel0"/>
+                <property name="torqueScale_motor_brake" value=".15, .5"/>
+            </property>
+    
+            <property class="wheel1">
+                <property name="tireTransform" value="Wheel1"/>
+                <property name="torqueScale_motor_brake" value="1, 1"/>
+            </property>
+    
+            <property class="headlight">
+                <property name="class" value="Headlight"/>
+                <property name="bright" value="1"/>
+    
+                <property name="transform" value="M/Forks/HeadLights/Lights"/>
+                <property name="matT" value="M/Forks/HeadLights"/>
+                <property name="matEmissive" value="808080"/>
+    
+                <property name="mod" value="light"/>
+                <property name="modT" value="M/Forks/LightMod"/>
+                <property name="modOnT" value="M/Forks/LightMod/Lights"/>
+                <property name="modMatEmissive" value="909090"/>
+    
+                <property name="tailEmissive" value="c0c0c0"/>
+            </property>
+    
+            <property class="armor">
+                <property name="class" value="VehiclePart"/>
+                <property name="mod" value="armor"/>
+                <property name="modT" value="M/Forks/Armor"/>
+                <property name="modRBT" value="Armor"/>
+            </property>
+    
+            <property class="storage">
+                <property name="class" value="Storage"/>
+                <property name="mesh" value="M/Storage"/>
+            </property>
+    
+        </vehicle>
+    </append>
+</caleb>

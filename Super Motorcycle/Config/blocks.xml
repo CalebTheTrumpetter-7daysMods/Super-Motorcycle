@@ -1,6 +1,6 @@
 <caleb>
 <append xpath="/blocks">
-<block name="superMotorcycleStatic">
+<block name="vehicleSuperMotorcyclePlaceable">
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
 	<property name="TintColor" value="808080"/>

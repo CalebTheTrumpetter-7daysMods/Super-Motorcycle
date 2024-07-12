@@ -1,7 +1,7 @@
 <caleb>
     <remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']" />
 
-    <append xpath="/progression/crafting_skills">
+    <insertAfter xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']">
 
     <crafting_skill name="craftingVehicles" max_level="100" parent="attCrafting" name_key="craftingVehiclesName" desc_key="craftingVehiclesDesc" long_desc_key="craftingVehiclesLongDesc" icon="ui_game_symbol_4x4">
 
@@ -30,5 +30,5 @@
 
 		</effect_group>
 	</crafting_skill> 
-</append>
+</insertAfter>
 </caleb>

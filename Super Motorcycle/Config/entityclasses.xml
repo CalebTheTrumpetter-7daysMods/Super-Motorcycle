@@ -1,7 +1,10 @@
 <caleb>
-    <append xpath="/entityclasses">
+    <insertAfter xpath="/entity_classes/entity_class[@name='vehicleGyrocopter']">
         <entity_class name="vehicleSuperMotorcycle">
             <property name="Class" value="EntityMotorcycle"/>
+            <property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
+            <property name="CustomIconTint" value="000000"/>
+            <property name="ItemTint" value="000000"/>
             <property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
             <property name="Parent" value="Cars"/>
             <property name="Prefab" value="@:Entities/Vehicles/VMotorcycle/VMotorcycleP.prefab"/>
@@ -20,5 +23,5 @@
             <property name="MapIcon" value="ui_game_symbol_motorcycle"/>
             <property name="NavObject" value="motorcycle" />
         </entity_class>
-    </append>
+    </insertAfter>
 </caleb>
